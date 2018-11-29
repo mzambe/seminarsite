@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Total Search Problems in Computation, Communication and Cryptography </title>
+  <meta name="description"
+    content="Total search problems are ones where every instance has a solution. Yet, a gtrowing body of evidence
+suggests that finding this solution is sometimes intractable. This phenomenon has fascinated complexity
+theorists since the 1980’s. Over the last few decades, it has also been tied to an increasingly diverse list of
+applications from areas such as Combinatorial Optimization, Graph Theory, Economics and Social Choice." />
+  <meta name="author" content="Aviad Rubinstein and Manolis Zampetakis">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="shortcut icon" type="./image/x-icon" href="focslogo.ico" />
+<!--===============================================================================================>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/table.css">
+<!--===============================================================================================-->
+
+<STYLE>
+<!--
+a {text-decoration:none}
+//-->
+</STYLE>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <!--ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link" href="#about">About</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#program">Program</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#organizers">Organizers</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#venue">Venue</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#research">References</a></li>
+      </ul-->
+      <div class="navbar-list">
+          <div class="navbar-item"><a class="navbar-link" href="#about">About</a></div>
+          <div class="navbar-item"><a class="navbar-link" href="#program">Program</a></div>
+          <div class="navbar-item"><a class="navbar-link" href="#organizers">Organizers</a></div>
+          <div class="navbar-item"><a class="navbar-link" href="#venue">Venue</a></div>
+          <div class="navbar-item"><a class="navbar-link" href="#research">References</a></div>
+          <div class="logos">
+            <a href="https://www.irif.fr/~focs2018/workshops/" target="_blank"><img src="images/focs2018i.png" height="53" alt="FOCS logo" /></a>
+          </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+      <div style="margin-top: 2%;">
+        <div class="trow">
+        <h2>Seminar on:
+        <p>Optimization and Machine Learning</h2>
+
+
+        <p>Welcome to the workshop on the complexity of total search problems, that will be held at
+        <a href="https://www.irif.fr/~focs2018/" style="color:DarkGreen"><strong>FOCS 2018</strong></a> in Paris!
+
+        </div>
+      </div>
+
+      <div class="twelve columns" id="about" style="background-image: url(images/niddle.png); background-repeat: no-repeat; background-size: 600px;">
+        <h4>About</h4>
+        <p> <strong>Total search problems</strong> are ones where every instance has a
+        solution. Yet, a growing body of evidence suggests that finding this solution is
+        sometimes intractable. This phenomenon has fascinated complexity theorists since
+        the 1980’s [<a href="#JYP'88" style="color:DarkGreen">1</a>,
+        <a href="#Pap'94" style="color:DarkGreen">2</a>]. Over the last few decades,
+        it has also been tied to an increasingly diverse list of applications from
+        areas such as Combinatorial Optimization, Graph Theory, Economics and Social Choice.
+
+        <p> In the last few years we saw both exciting breakthroughs on some of the core
+        problems on the study of complexity of total functions, as well as new
+        connections discovered to other areas of Theoretical Computer Science:
+        Communication Complexity [<a href="#BR'17" style="color:DarkGreen">41</a>, <a
+        href="#GGKS'18" style="color:DarkGreen">42</a>, <a href="#PR'18" style="color:DarkGreen">43</a>, <a href="#GR'18" style="color:DarkGreen">44</a>], Circuit Complexity [<a
+        href="#GGKS'18" style="color:DarkGreen">42</a>], Cryptography [<a href="#BPR'15"
+        style="color:DarkGreen">33</a>, <a href="#HY'17"
+        style="color:DarkGreen">35</a>, <a href="#KMY'17"
+        style="color:DarkGreen">36</a>, <a href="#RSS'17"
+        style="color:DarkGreen">38</a>], Probabilistically Checkable Proofs [<a
+        href="#BPR'16" style="color:DarkGreen">13</a>, <a href="#Rub'16"
+        style="color:DarkGreen">14</a>], Linear Programming and Sum-of-Squares
+        hierarchies [<a href="#KM'18" style="color:DarkGreen">49</a>].
+
+        <p>
+        The main goal of this workshop is to introduce the broad Theoretical Computer Science community
+        to total functions and the aforementioned connections to various subfields, as well as promote new connections.
+        A secondary goal of the workshop is to advertise some of the recent breakthroughs (including
+        natural complete problems for PPA and PPP [<a href="#RG'18a" style="color:DarkGreen">27</a>, <a href="#SZZ'18" style="color:DarkGreen">29</a>]), and shine the spotlight on some of the core open problems.
+    </div>
+
+    <div class="contact" id="organizers" style="margin-top: 50px;">
+          <!--div class="seven columns" id="organizers"-->
+            <h4>Organizers</h4>
+              <div class="columnl" float="left">
+                <a href="https://cs.stanford.edu/~aviad/">Kuriakos Axiotis</a>
+                <p><strong>Email</strong>: kaxiotis [at) mit [dot) edu  
+              </div>
+              <div class="columnl" float="left">
+                <a href="https://cs.stanford.edu/~aviad/">Dimitris Tsipras</a>
+                <p><strong>Email</strong>: tsipras [at)  mit (dot] edu
+              </div>
+              <div class="columnr" float="left">
+                <a href="http://www.mit.edu/~mzampet">Manolis Zampetakis</a>
+                <p><strong>Email</strong>: mzampet [at)  mit(dot]edu
+              </div>
+          </div>
+
+      <div style="margin-top: 2%;">
+        <div class="twelve columns" id="program">
+        <p> <p><h4>Program</h4>
+
+
+            <div class="container-table100">
+              <div class="wrap-table100">
+                  <div class="table">
+
+                    <div class="row header">
+                      <div class="cell">
+                        Time
+                      </div>
+                      <div class="cell">
+                        Presenter
+                      </div>
+                      <div class="cell">
+                        Title
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                          03:20 p.m.
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                          <a href="http://people.csail.mit.edu/costis/" target="_blank" style="color:black">
+                              <strong>Constantinos Daskalakis</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          <div class="timeb">
+                          Introduction to the Complexity of Total Search Problems
+                          </div>
+                      </div>
+                    </div>
+
+                    <div class="row break">
+                      <div class="cell" data-title="Time">
+                        04:00 p.m.
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        Break
+                      </div>
+                      <div class="cell" data-title="Title">
+
+                      </div>
+                    </div>
+
+                    <div class="row header">
+                      <div class="ecell" data-title="Time"></div>
+                      <div class="ecell" data-title="Presenter"></div>
+                      <div class="ecell" data-title="Title"></div>
+                    </div>
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                        04:10 p.m.
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="http://www.eecs.harvard.edu/~alon/" target="_blank" style="color:black">
+                              <strong>Alon Rosen</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          Total Search Problems and Cryptography
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                        04:40 p.m.
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="http://www.mit.edu/~pritish/" target="_blank" style="color:black">
+                              <strong>Pritish Kamath</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          TFNP in Query & Communication Complexity
+                      </div>
+                    </div>
+
+                    <div class="row break">
+                      <div class="cell" data-title="Time">
+                        05:10 p.m.
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        Break
+                      </div>
+                      <div class="cell" data-title="Title">
+
+                      </div>
+                    </div>
+
+                    <div class="row header">
+                      <div class="ecell" data-title="Time"></div>
+                      <div class="ecell" data-title="Presenter"></div>
+                      <div class="ecell" data-title="Title"></div>
+                    </div>
+
+                    <div class="row mheader">
+                      <div class="cell">
+                          05:20 p.m.
+                      </div>
+                      <div class="cell">
+                          <strong>Lighting Talks (9-min each)</strong>
+                      </div>
+                      <div class="cell">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="http://arisfilosratsikas.com/" target="_blank" style="color:black">
+                              <strong>Aris Filos-Ratsikas</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          PPA-Completeness
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="https://arxiv.org/abs/1804.03450" target="_blank" style="color:black">
+                          <strong>Spencer Gordon</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          End of The Potential Line
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="https://web.iem.technion.ac.il/en/people/userprofile/yakovbab.html" target="_blank" style="color:black">
+                          <strong>Yakov Babichenko</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          Communication Complexity of Local Search
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="http://www.mit.edu/~anandn/" target="_blank" style="color:black">
+                          <strong>Anand Natarajan</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          Sum of Squares and TFNP
+                      </div>
+                    </div>
+
+                    <!--div class="row">
+                      <div class="cell" data-title="Time">
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="http://simina.info/" target="_blank" style="color:black">
+                          <strong>Simina Branzei</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          Communication Complexity of Cake Cutting
+                      </div>
+                    </div-->
+
+                    <div class="row">
+                      <div class="cell" data-title="Time">
+                      </div>
+                      <div class="cell" data-title="Presenter">
+                        <a href="http://shant.boodaghians.com/" target="_blank" style="color:black">
+                          <strong>Shant Boodaghians</strong></a>
+                      </div>
+                      <div class="cell" data-title="Title">
+                          Nash Equilibrium in Smoothed Polynomial Time for Network Coordination Games
+                      </div>
+                    </div>
+
+                    <div class="row header">
+                      <div class="ecell" data-title="Time"></div>
+                      <div class="ecell" data-title="Presenter"></div>
+                      <div class="ecell" data-title="Title"></div>
+                    </div>
+
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
+    <div class="ttrow" style="padding-top: 1em; margin-top: 50px;">
+      <div class="twelve columns" id="venue" style="margin-top: 50px;">
+        <h4>Venue</h4>
+          <p> Tha workshop will take place on October 6th 2018 in Paris at <a href="http://ihp.fr/en" style="color:DarkGreen">Institut Henri Poincaré</a> (<a href="https://www.google.fr/maps/place/Institut+Henri+Poincar%C3%A9/@48.8442135,2.3413597,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671e82eaa7aff:0xf280319d9e3a86e1!8m2!3d48.84421!4d2.3435537?hl=en"><strong>Directions</strong></a>).
+    </div>
+    </div>
+
+    <div class="trow2" style="padding-top: 1em;">
+      <div class="twelve columns" id="research">
+        <h4>References on the Complexity of Total Search Problems</h4>
+
+        <ol>
+
+        <!--h5> <strong> Fundamental Concepts (Definitions, Black-Box Separations, Closures) </strong> </h5-->
+
+        <p> <h5> <strong> Definition of Classes </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="https://www.karlin.mff.cuni.cz/~krajicek/jpy2.pdf" style="color:black" id="JYP'88" target="_blank">
+                    How Easy is Local Search?
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://en.wikipedia.org/wiki/David_S._Johnson" target="_blank">D.
+                Johnson</a>,
+                <a href="http://www.cs.columbia.edu/~mihalis/" target="_blank">M.
+                Yannakakis</a>,
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>
+            </div>
+
+            <div class="publication-conference">
+              Journal of Computer and System Sciences, 1988
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://people.eecs.berkeley.edu/~christos/papers/On%20the%20Complexity.pdf" style="color:black" id="Pap'94" target="_blank">
+                    On the Complexity of the Parity Argument and Other Inefficient Proofs of Existence
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>
+            </div>
+
+            <div class="publication-conference">
+              Journal of Computer and System Sciences, 1994
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="http://people.csail.mit.edu/costis/CLS.pdf" style="color:black" id="DP'11" target="_blank">
+                    Continous Local Search
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://people.csail.mit.edu/costis/" target="_blank">C. Daskalakis</a>,
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>
+            </div>
+
+            <div class="publication-conference">
+              22nd SIAM Symposium on Discrete Algorithms
+              <a href="https://archive.siam.org/meetings/da11/">
+                  SODA 2011
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href = "http://drops.dagstuhl.de/opus/volltexte/2018/8340/pdf/LIPIcs-ITCS-2018-37.pdf" style="color:black" id="GP'18" target="_blank">
+                  Towards a Unified Complexity Theory of Total Functions
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.cs.ox.ac.uk/people/paul.goldberg/index1.html" target="_blank">P. Goldberg</a>,
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>
+            </div>
+
+            <div class="publication-conference">
+              9th Innovations in Theoretical Computer Science
+              <a href="https://projects.csail.mit.edu/itcs/">
+                  ITCS 2018
+              </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> Black Box Separations of TFNP Subclasses </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="https://homes.cs.washington.edu/~beame/papers/NPSearchJournal.pdf" style="color:black" id="BCEIP'98" target="_blank">
+                    The Relative Complexity of NP Search Problems
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://www.cs.washington.edu/people/faculty/beame/" target="_blank">P. Beame</a>,
+                <a href="http://www.cs.toronto.edu/~sacook/" target="_blank">S. Cook</a>,
+                <a href="http://www.cs.yorku.ca/~jeff/" target="_blank">J. Edmonds</a>,
+                <a href="http://cseweb.ucsd.edu/~russell/" target="_blank">R. Impagliazzo</a>,
+                <a href="https://www.cs.toronto.edu/~toni/" target="_blank">T. Pitassi</a>
+            </div>
+
+            <div class="publication-conference">
+              Journal of Computer and System Sciences, 1998
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://link.springer.com/content/pdf/10.1007/BFb0054137.pdf" style="color:black" id="Sim'98" target="_blank">
+                  Finding Collisions on a One-Way Street: Can Secure Hash Fhnctions Be Based on General Assumptions?
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://dblp.uni-trier.de/pers/hd/s/Simon:Daniel_R=" target="_blank">D. Simon</a>
+            </div>
+
+            <div class="publication-conference">
+              27th Annual International Conference on the Theory and Applications of Cryptographic Techniques
+              <a href="https://www.iacr.org/conferences/ec98/">
+                EUROCRYPT 1998
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2001/082/" style="color:black" id="Mor'01" target="_blank">
+                  Classification of Search Problems and Their Definability in Bounded Arithmetic
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://dblp.uni-trier.de/pers/hd/m/Morioka:Tsuyoshi" target="_blank">T. Morioka</a>
+            </div>
+
+            <div class="publication-conference">
+              Electronic Colloquium on Computational Complexity, 2001
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il//eccc-reports/2003/TR03-084/index.html" style="color:black" id="BOM'04" target="_blank">
+                  Relativized NP Search Problems and Propositional Proof Systems
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.cs.toronto.edu/~bureshop/" target="_blank">J. Buresh-Oppenheim
+                </a>,
+                <a href="https://dblp.uni-trier.de/pers/hd/m/Morioka:Tsuyoshi" target="_blank">T. Morioka</a>
+            </div>
+
+            <div class="publication-conference">
+              19th IEEE Conference on Computational Complexity
+              <a href="https://people.cs.umass.edu/~barring/ccc2004/">
+                CCC 2004
+              </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> Closure Under Cook-Reductions </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="https://www.math.ucsd.edu/~sbuss/ResearchWeb/NPSearch/NPSearch.pdf" style="color:black" id="BJ'12" target="_blank">
+                  Propositional Proofs and Reductions between NP Search Problems
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.math.ucsd.edu/~sbuss/" target="_blank">S. Buss</a>
+                <a href="https://dblp.uni-trier.de/pers/hd/j/Johnson:Alan_S=" target="_blank">A. Johnson</a>
+            </div>
+
+            <div class="publication-conference">
+              Annals of Pure and Applied Logic, 2012
+            </div>
+        </li>
+
+        <p> <h5> <strong> Hardness of Finding a Nash Equilibrium </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="http://people.csail.mit.edu/costis/journal_ver10.pdf" style="color:black" id="DGP'09" target="_blank">
+                  The Complexity of Computing a Nash Equilibrium
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://people.csail.mit.edu/costis/" target="_blank">C. Daskalakis</a>,
+                <a href="http://www.cs.ox.ac.uk/people/paul.goldberg/index1.html" target="_blank">P. Goldberg</a>,
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>
+            </div>
+
+            <div class="publication-conference">
+              SIAM Journal of Computing, 2009
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="http://people.csail.mit.edu/costis/journal_ver10.pdf" style="color:black" id="CDT'06" target="_blank">
+                  Settling the Complexity of Computing Two-Player Nash Equilibria
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.cs.columbia.edu/~xichen/Homepage/Welcome.html" target="_blank">X. Chen</a>,
+                <a href="http://www.cs.sjtu.edu.cn/en/PeopleDetail.aspx?id=175" target="_blank">X. Deng</a>,
+                <a href="https://www-bcf.usc.edu/~shanghua/" target="_blank">S. Teng</a>
+            </div>
+
+            <div class="publication-conference">
+              47th Annual IEEE Symposium on Foundations of Computer Science
+            <a href="http://ieee-focs.org/focs2006/">
+                FOCS 2006
+            </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> Approximate Nash Equilibrium and PCP for PPAD </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1405.3322" style="color:black" id="Rub'15" target="_blank">
+                    Inapproximability of Nash Equilibrium
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://cs.stanford.edu/~aviad/">A. Rubinstein</a>
+            </div>
+
+            <div class="publication-conference">
+              47th Annual ACM Symposium on the Theory of Computing
+              <a href="http://acm-stoc.org/stoc2015/">
+                  STOC 2015
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1504.02411" style="color:black" id="BPR'16" target="_blank">
+                    Can almost everybody be almost happy?
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://web.iem.technion.ac.il/en/people/userprofile/yakovbab.html" target="_blank">Y. Babichenko</a>,
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>,
+                <a href="https://cs.stanford.edu/~aviad/">A. Rubinstein</a>
+            </div>
+
+            <div class="publication-conference">
+                9th Annual Innovations in Theoretical Computer Science
+                <a href="https://projects.csail.mit.edu/itcs/">
+                    ITCS 2016
+                </a>
+            </div>
+          </li>
+
+            <li>
+                <strong>
+                    <a href="https://arxiv.org/abs/1606.04550" style="color:black" id="Rub'16" target="_blank">
+                        Settling the Complexity of Computing Approximate Two-Player Nash Equilibria
+                    </a> &nbsp;
+                </strong>
+
+                <div class="authors">
+                    <a href="https://cs.stanford.edu/~aviad/">A. Rubinstein</a>
+                </div>
+
+                <div class="publication-conference">
+                    57th Annual IEEE Symposium on Foundations of Computer Science
+                    <a href="http://dimacs.rutgers.edu/archive/FOCS16/">
+                        FOCS 2016
+                    </a>
+                </div>
+        </li>
+
+        <p> <h5> <strong> More on PPAD-completeness </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/devanur-marketfixedngoods.pdf" style="color:black" id="DK'08" target="_blank">
+                  Market Equilibria in Polynomial time for fixed number of goods or agents
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.nikhildevanur.com/" target="_blank">N. Devanur</a>,
+                <a href="https://www.microsoft.com/en-us/research/people/kannan/" target="_blank">R. Kannan</a>
+            </div>
+
+            <div class="publication-conference">
+              49th Annual IEEE Symposium on Foundations of Computer Science
+            <a href="http://ieee-focs.org/focs2008/">
+                FOCS 2008
+            </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/0904.0644" style="color:black" id="CDDT'09" target="_blank">
+                  Settling the Complexity of Arrow-Debreu Equilibria in Markets with Additively Separable Utilities
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.cs.columbia.edu/~xichen/Homepage/Welcome.html" target="_blank">X. Chen</a>,
+                <a href="https://dblp.org/pers/hd/d/Dai:Decheng" target="_blank">D. Dai</a>,
+                <a href="https://dblp.uni-trier.de/pers/hd/d/Du:Ye" target="_blank">Y. Du</a>,
+                <a href="https://www-bcf.usc.edu/~shanghua/" target="_blank">S. Teng</a>
+            </div>
+
+            <div class="publication-conference">
+              50th Annual IEEE Symposium on Foundations of Computer Science
+            <a href="https://www.cc.gatech.edu/focs2009/">
+                FOCS 2009
+            </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="http://www.ccs.neu.edu/home/ljp/focs09_ppad.pdf" style="color:black" id="KPRST'09" target="_blank">
+                  Reducibility Among Fractional Stability Problems
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://shivakintali.org/" target="_blank">S. Kintali</a>,
+                <a href="http://www.ccs.neu.edu/home/ljp/" target="_blank">L. Poplawski</a>,
+                <a href="http://www.ccs.neu.edu/home/rraj/" target="_blank">R. Rajaraman</a>,
+                <a href="https://www.ccis.northeastern.edu/people/ravi-sundaram/" target="_blank"> R. Sundaram</a>,
+                <a href="https://www-bcf.usc.edu/~shanghua/" target="_blank">S. Teng</a>
+            </div>
+
+            <div class="publication-conference">
+              50th Annual IEEE Symposium on Foundations of Computer Science
+            <a href="https://www.cc.gatech.edu/focs2009/">
+                FOCS 2009
+            </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://www.ics.uci.edu/~vazirani/plc.pdf" style="color:black" id="VY'11" target="_blank">
+                  Market Equilibrium under Separable, Piecewise-Linear, Concave Utilities
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://www.ics.uci.edu/~vazirani/" target="_blank">V. Vazirani</a>,
+                <a href="http://www.cs.columbia.edu/~mihalis/" target="_blank">M.
+                Yannakakis</a>
+            </div>
+
+            <div class="publication-conference">
+              Journal of ACM, 2011
+            </div>
+        </li>
+
+        <p> <h5> <strong> PLS-completeness </strong> </h5>
+
+        <li> <strong>
+            <a href="https://epubs.siam.org/doi/abs/10.1137/0220004?journalCode=smjcat" style="color:black" id="SY'91" target="_blank">
+                Simple Local Search Problems that are Hard to Solve
+            </a> &nbsp;
+            </strong>
+            <div class="authors">
+                <a href="https://www.ncbi.nlm.nih.gov/research/staff/schaffer/" target="_blank">A. Schäffer</a>,
+                <a href="http://www.cs.columbia.edu/~mihalis/" target="_blank">M.
+                Yannakakis</a>
+            </div>
+
+            <div class="publication-conference">
+                SIAM Journal of Computing, 1991
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://epubs.siam.org/doi/abs/10.1137/0221030" style="color:black" id="Pap'92" target="_blank">
+                  The Complexity of the Lin–Kernighan Heuristic for the Traveling Salesman Problem
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>
+            </div>
+
+            <div class="publication-conference">
+                SIAM Journal of Computing, 1992
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="http://alex.fabrikant.us/papers/fpt04.pdf" style="color:black" id="FTP'04" target="_blank">
+                  The Complexity of Pure Nash Equilibria
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://alex.fabrikant.us/" target="_blank">A. Fabrikant</a>,
+                <a href="http://kunaltalwar.org/" target="_blank">K. Talwar</a>,
+                <a href="https://people.eecs.berkeley.edu/~christos/" target="_blank">C. Papadimitriou</a>
+            </div>
+
+            <div class="publication-conference">
+                36th Annual ACM Symposium on the Theory of Computing
+                <a href="http://acm-stoc.org/stoc2004/">
+                    STOC 2004
+                </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> PPA-completeness </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.31.7143&rep=rep1&type=pdf" style="color:black" id="Gri'01" target="_blank">
+                    A Sperner Lemma Complete for PPA
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.mathcs.emory.edu/~mic/" target="_blank">M. Grigni</a>
+            </div>
+
+            <div class="publication-conference">
+              Information Processing Letters, 2001
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2015/163/" style="color:black" id="ABB'15" target="_blank">
+                    2-D Tucker is PPA-complete
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://math.ucsd.edu/~jaisenbe/" target="_blank">J. Aisenberg</a>,
+                <a href="http://www.lsi.upc.edu/~bonet/" target="_blank">M.L. Bonet</a>,
+                <a href="http://www.math.ucsd.edu/~sbuss/" target="_blank">S. Buss</a>
+            </div>
+
+            <div class="publication-conference">
+              Electronic Colloquium on Computational Complexity, 2015
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2015/120/" style="color:black" id="DFLQ'16" target="_blank">
+                    Understanding PPA-completeness
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.cs.sjtu.edu.cn/en/PeopleDetail.aspx?id=175" target="_blank">X. Deng</a>,
+                <a href="https://scholar.harvard.edu/zfeng/home" target="_blank">Z. Feng</a>,
+                <a href="https://dblp.org/pers/hd/l/Liu:Zhengyang" target="_blank">Z. Liu</a>,
+                <a href="https://www.seng.ust.hk/web/eng/people_detail.php?id=243" target="_blank">Q. Qi</a>
+            </div>
+
+            <div class="publication-conference">
+              31th IEEE Conference on Computational Complexity
+              <a href="http://www.al.ics.saitama-u.ac.jp/elc/ccc/">
+                CCC 2016
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2017/118/" style="color:black" id="DFK'17" target="_blank">
+                    Octahedral Tucker is PPA-complete
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.cs.sjtu.edu.cn/en/PeopleDetail.aspx?id=175" target="_blank">X. Deng</a>,
+                <a href="https://scholar.harvard.edu/zfeng/home" target="_blank">Z. Feng</a>,
+                <a href="https://dblp.org/pers/hd/k/Kulkarni:Rucha" target="_blank">R. Kulkarni</a>
+            </div>
+
+            <div class="publication-conference">
+              Electronic Colloquium on Computational Complexity, 2017
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1710.08602" style="color:black" id="BIQSY'17" target="_blank">
+                On the Polynomial Parity Argument Complexity of the Combinatorial Nullstellensatz
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://home.lu.lv/~belovs/papers.html" target="_blank">A. Belovs</a>,
+                <a href="http://old.sztaki.hu/~ivanyos/" target="_blank">G. Ivanyos</a>,
+                <a href="https://www.uts.edu.au/staff/youming.qiao" target="_blank">Y. Qiao</a>,
+                <a href="https://www.irif.fr/~santha/" target="_blank">M. Santha</a>,
+                <a href="https://dblp.org/pers/hd/y/Yang:Siyi" target="_blank">S. Yang</a>
+            </div>
+
+            <div class="publication-conference">
+              31th IEEE Conference on Computational Complexity
+              <a href="http://www.computationalcomplexity.org/Archive/2017/fullsite/index.html">
+                CCC 2017
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1711.04503" style="color:black" id="RG'18a" target="_blank">
+                    Consensus Halving is PPA-Complete
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://arisfilosratsikas.com/" target="_blank">A. Filos-Ratsikas</a>,
+                <a href="http://www.cs.ox.ac.uk/people/paul.goldberg/index1.html" target="_blank">P. Goldberg</a>
+            </div>
+
+            <div class="publication-conference">
+                50th Annual ACM Symposium on the Theory of Computing
+                <a href="http://acm-stoc.org/stoc2018/">
+                    STOC 2018
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1805.12559" style="color:black" id="RG'18b" target="_blank">
+                    The Complexity of Splitting Necklaces and Bisecting Ham Sandwiches
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://arisfilosratsikas.com/" target="_blank">A. Filos-Ratsikas</a>,
+                <a href="http://www.cs.ox.ac.uk/people/paul.goldberg/index1.html" target="_blank">P. Goldberg</a>
+            </div>
+
+            <div class="publication-conference">
+                Manuscript
+                <a href="https://arxiv.org/abs/1805.12559">
+                    ArXiv 2018
+                </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> PPP-completeness </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1808.06407" style="color:black" id="SZZ'18" target="_blank">
+                    PPP-completeness with Connections to Cryptography
+                </a>
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.mit.edu/~katesot/" target="_blank">K. Sotiraki</a>,
+                <a href="http://www.mit.edu/~mzampet">M. Zampetakis</a>,
+                <a href="https://www.ccis.northeastern.edu/people/giorgos-zirdelis/" target="_blank">Giorgos Zirdelis</a>
+            </div>
+
+            <div class="publication-conference">
+                59th Annual IEEE Symposium on Foundations of Computer Science
+                <a href="https://www.irif.fr/~focs2018/">
+                    FOCS 2018
+                </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> CLS-completeness </strong> </h5>
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1702.07339" style="color:black" id="DTZ'18" target="_blank">
+                    A Converse to Banach's Fixed Point Theorem and its CLS Completeness
+                </a>
+            </strong>
+
+            <div class="authors">
+                <a href="http://people.csail.mit.edu/costis/" target="_blank">C. Daskalakis</a>,
+                <a href="http://christos.me" target="_blank">C. Tzamos</a>,
+                <a href="http://www.mit.edu/~mzampet">M. Zampetakis</a>
+            </div>
+
+            <div class="publication-conference">
+                50th Annual ACM Symposium on the Theory of Computing
+                <a href="http://acm-stoc.org/stoc2018/">
+                    STOC 2018
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1804.03450" style="color:black" id="FGMS'18" target="_blank">
+                    End of potential line
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://cgi.csc.liv.ac.uk/~john/" target="_blank">J. Fearnley</a>,
+                S. Gordon,
+                <a href="http://rutamehta.cs.illinois.edu/">R. Mehta</a>,
+                <a href="http://cgi.csc.liv.ac.uk/~rahul/">R. Savani</a>
+            </div>
+
+            <div class="publication-conference">
+                Manuscript
+                <a href="https://arxiv.org/abs/1804.03450">
+                    ArXiv 2018
+                </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> Cryptography and Total Search Problems </strong> </h5>
+        <li>
+            <strong>
+                <a href="http://web.mit.edu/tabbott/Public/final.pdf" style="color:black" id="AKV'04" target="_blank">
+                    On Algorithms for Nash Equilibria
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://web.mit.edu/tabbott/www/" target="_blank">T. Abbott</a>,
+                <a href="https://cseweb.ucsd.edu/~dakane/" target="_blank">D. Kane</a>,
+                <a href="http://cs.brown.edu/~pvaliant/" target="_blank">P. Valiant</a>
+            </div>
+
+            <div class="publication-conference">
+                Manuscript, 2004
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eprint.iacr.org/2014/1029.pdf" style="color:black" id="BPR'15" target="_blank">
+                    On the Cryptographic Hardness of Finding a Nash Equilibrium
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://sites.google.com/site/nirbitansky/" target="_blank">N. Bitansky</a>,
+                <a href="http://people.csail.mit.edu/omerpa/" target="_blank">O. Paneth</a>,
+                <a href="http://www.eecs.harvard.edu/~alon/" target="_blank">A. Rosen</a>
+            </div>
+
+            <div class="publication-conference">
+                56th Annual IEEE Symposium on Foundations of Computer Science
+                <a href="https://focs15.simons.berkeley.edu/">
+                    FOCS 2015
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eprint.iacr.org/2015/1078" style="color:black" id="GPS'16" target="_blank">
+                    Revisiting the Cryptographic Hardness of Finding a Nash Equilibrium
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://people.eecs.berkeley.edu/~sanjamg/" target="_blank">S. Garg</a>,
+                <a href="http://www3.cs.stonybrook.edu/~omkant/" target="_blank">O. Pandey</a>,
+                <a href="https://people.eecs.berkeley.edu/~akshayaram/" target="_blank">A. Srinivasan</a>
+            </div>
+
+            <div class="publication-conference">
+                36th International Cryptology Conference
+                <a href="https://www.iacr.org/conferences/crypto2016/">
+                    CRYPTO 2016
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2016/063" style="color:black" id="HY'17" target="_blank">
+                    Hardness of Continuous Local Search: Query Complexity and Cryptographic Lower Bounds
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://iuuk.mff.cuni.cz/~hubacek/" target="_blank">P. Hubácek</a>,
+                <a href="https://www.eylonyogev.com/about" target="_blank">E. Yogev</a>
+            </div>
+
+            <div class="publication-conference">
+                28th ACM-SIAM Symposium on Discrete Algorithms
+                <a href="https://archive.siam.org/meetings/da17/">
+                    SODA 2017
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2017/015" style="color:black" id="KNY'17" target="_blank">
+                    White-box vs. Black-box Complexity of Search Problems: Ramsey and Graph Property Testing
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://ilan.tech.cornell.edu/" target="_blank">I. Komargodski</a>,
+                <a href="http://www.wisdom.weizmann.ac.il/~/naor/" target="_blank">M. Naor</a>,
+                <a href="https://www.eylonyogev.com/about" target="_blank">E. Yogev</a>
+            </div>
+
+            <div class="publication-conference">
+                58th Annual IEEE Symposium on Foundations of Computer Science
+                <a href="https://focs17.simons.berkeley.edu/">
+                    FOCS 2017
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il//report/2016/199/" style="color:black" id="HMY'17" target="_blank">
+                    The Journey from NP to TFNP Hardness
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://iuuk.mff.cuni.cz/~hubacek/" target="_blank">P. Hubácek</a>,
+                <a href="http://www.wisdom.weizmann.ac.il/~/naor/" target="_blank">M. Naor</a>,
+                <a href="https://www.eylonyogev.com/about" target="_blank">E. Yogev</a>
+            </div>
+
+            <div class="publication-conference">
+                8th Innovations in Theoretical Computer Science
+                <a href="http://itcs-conf.org/itcs17/itcs17-info.html">
+                    ITCS 2017
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eprint.iacr.org/2016/375.pdf" style="color:black" id="RSS'17" target="_blank">
+                  Can PPAD Hardness be Based on Standard Cryptographic Assumptions?
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.eecs.harvard.edu/~alon/" target="_blank">A. Rosen</a>,
+                <a href="https://www.gilsegev.net/" target="_blank">G. Segev</a>,
+                <a href="https://dblp.org/pers/hd/s/Shahaf:Ido" target="_blank">I. Shahaf</a>
+            </div>
+
+            <div class="publication-conference">
+                15th IACR Theory of Cryptography Conference
+                <a href="https://www.iacr.org/workshops/tcc2017/">
+                    TCC 2017
+                </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> Factoring in PPA and PPP </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="http://www.cs.toronto.edu/~bureshop/factor.pdf" style="color:black" id="Bur'06" target="_blank">
+                    On the TFNP complexity of factoring
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+              <a href="http://www.cs.toronto.edu/~bureshop/" target="_blank">J. Buresh-Oppenheim
+              </a>
+            </div>
+
+            <div class="publication-conference">
+              Manuscript, 2006
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1207.5220" style="color:black" id="Jer'16" target="_blank">
+                    Integer factoring and modular square roots
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+              <a href="http://users.math.cas.cz/~jerabek/" target="_blank">E. Jerabek</a>
+            </div>
+
+            <div class="publication-conference">
+              Journal of Computer and System Sciences, 2016
+            </div>
+        </li>
+
+        <p> <h5> <strong> Query & Communication Complexity and TFNP </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1608.06580" style="color:black" id="BR'17" target="_blank">
+                    Communication complexity of approximate Nash equilibria
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://web.iem.technion.ac.il/en/people/userprofile/yakovbab.html" target="_blank">Y. Babichenko</a>,
+                <a href="https://cs.stanford.edu/~aviad/">A. Rubinstein</a>
+            </div>
+
+            <div class="publication-conference">
+              49th Annual ACM Symposium on the Theory of Computing
+              <a href="http://acm-stoc.org/stoc2017/">
+                  STOC 2017
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2017/175/" style="color:black" id="GGKS'18" target="_blank">
+                    Monotone circuit lower bounds from resolution
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://www.microsoft.com/en-us/research/people/" target="_blank">A. Garg</a>,
+                <a href="https://www.cs.utoronto.ca/~mgoos/" target="_blank">M. Goos</a>,
+                <a href="http://www.mit.edu/~pritish/" target="_blank">P. Kamath</a>,
+                <a href="http://www.csc.kth.se/~sokolovd/" target="_blank">D. Sokolov</a>
+            </div>
+
+            <div class="publication-conference">
+                50th Annual ACM Symposium on the Theory of Computing
+                <a href="http://acm-stoc.org/stoc2018/">
+                    STOC 2018
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2017/165/" style="color:black" id="PR'18L" target="_blank">
+                    Lifting Nullstellensatz to Monotone Span Programs over Any Field
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://www.cs.toronto.edu/~toni/" target="_blank">T. Pitassi</a>,
+                <a href="https://www.cs.toronto.edu/~robere/" target="_blank">R. Robere</a>
+            </div>
+
+            <div class="publication-conference">
+              50th Annual ACM Symposium on the Theory of Computing
+                <a href="http://acm-stoc.org/stoc2018/">
+                    STOC 2018
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1805.06387" style="color:black" id="GR'18" target="_blank">
+                  Near-Optimal Communication Lower Bounds for Approximate Nash Equilibria
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://www.cs.utoronto.ca/~mgoos/" target="_blank">M. Goos</a>,
+                <a href="https://cs.stanford.edu/~aviad/">A. Rubinstein</a>
+            </div>
+
+            <div class="publication-conference">
+              59th Annual IEEE Symposium on Foundations of Computer Science
+              <a href="https://www.irif.fr/~focs2018/">
+                  FOCS 2018
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1804.02676" style="color:black" id="BDN'18" target="_blank">
+                    The Communication Complexity of Local Search
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://web.iem.technion.ac.il/en/people/userprofile/yakovbab.html" target="_blank">Y. Babichenko</a>,
+                <a href="https://sites.google.com/site/dobzin/" target="_blank">S. Dobzinski</a>,
+                <a href="http://www.cs.huji.ac.il/~noam/" target="_blank">N. Nisan</a>
+            </div>
+
+            <div class="publication-conference">
+                Manuscript
+                <a href="https://arxiv.org/abs/1804.02676">
+                    ArXiv 2018
+                </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://eccc.weizmann.ac.il/report/2018/163/" style="color:black" id="GKRS'18" target="_blank">
+                  Adventures in Monotone Complexity and TFNP
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://www.cs.utoronto.ca/~mgoos/" target="_blank">M. Goos</a>,
+                <a href="http://www.mit.edu/~pritish/" target="_blank">P. Kamath</a>,
+                <a href="https://www.cs.toronto.edu/~robere/" target="_blank">R. Robere</a>,
+                <a href="http://www.csc.kth.se/~sokolovd/" target="_blank">D. Sokolov</a>
+            </div>
+
+            <div class="publication-conference">
+                Electronic Colloquium on Computational Complexity, 2018
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1709.09876" style="color:black" id="BN'18" target="_blank">
+                  Communication Complexity of Cake Cutting
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+              <a href="http://simina.info/" target="_blank" style="color:black">S. Branzei</a>,
+              <a href="http://www.cs.huji.ac.il/~noam/" target="_blank">N. Nisan</a>
+            </div>
+
+            <div class="publication-conference">
+                Manuscript, 2018
+            </div>
+        </li>
+
+        <p> <h5> <strong> Sum of Squares and TFNP </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="http://drops.dagstuhl.de/opus/frontdoor.php?source_opus=5856" style="color:black" id="HNW'16" target="_blank">
+                  Tight SoS-Degree Bounds for Approximate Nash Equilibria
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://web.mit.edu/aram/www/" target="_blank">A. Harrow</a>,
+                <a href="http://www.mit.edu/~anandn/" target="_blank" style="color:black">
+                A. Natarajan</a>,
+                <a href="https://www.cs.umd.edu/~xwu/" target="_blank">X. Wu</a>
+            </div>
+
+            <div class="publication-conference">
+              31th IEEE Conference on Computational Complexity
+              <a href="http://www.al.ics.saitama-u.ac.jp/elc/ccc/">
+                CCC 2016
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1806.09426" style="color:black" id="KM'18" target="_blank">
+                    Sum-of-Squares meets Nash: Lower Bounds for Finding any Equilibrium
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://www.cs.princeton.edu/~kothari/" target="_blank">P. Kothari</a>,
+                <a href="http://rutamehta.cs.illinois.edu/" target="_blank">R. Mehta</a>
+            </div>
+
+            <div class="publication-conference">
+                50th Annual ACM Symposium on the Theory of Computing
+                <a href="http://acm-stoc.org/stoc2018/">
+                    STOC 2018
+                </a>
+            </div>
+        </li>
+
+        <p> <h5> <strong> Smoothed Complexity of Total Search Problems </strong> </h5>
+
+        <li>
+            <strong>
+                <a href="http://www.roeglin.org/publications/SODA14.pdf" style="color:black" id="ER'14" target="_blank">
+                  Smoothed Analysis of Local Search for the Maximum-Cut Problem
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="http://tcs.cs.uni-bonn.de/doku.php?id=staff:michaeletscheid" target="_blank">M. Etscheid</a>,
+                <a href="http://www.roeglin.org/" target="_blank">H. Roeglin</a>
+            </div>
+
+            <div class="publication-conference">
+              25nd SIAM Symposium on Discrete Algorithms
+              <a href="https://archive.siam.org/meetings/da14/">
+                  SODA 2014
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1610.04807" style="color:black" id="ABPW'17" target="_blank">
+                  Local max-cut in smoothed polynomial time
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+                <a href="https://www.math.ubc.ca/~angel/" target="_blank">O. Angel</a>,
+                <a href="http://sbubeck.com/" target="_blank">S. Bubeck</a>,
+                <a href="http://yuvalperes.com/" target="_blank">Y. Peres</a>,
+                <a href="https://stanford.edu/~fanwei/home" target="_blank">F. Wei</a>
+            </div>
+
+            <div class="publication-conference">
+              49th Annual ACM Symposium on the Theory of Computing
+              <a href="http://acm-stoc.org/stoc2017/">
+                  STOC 2017
+              </a>
+            </div>
+        </li>
+
+        <li>
+            <strong>
+                <a href="https://arxiv.org/abs/1809.02280" style="color:black" id="BKM'18" target="_blank">
+                  Nash Equilibrium in Smoothed Polynomial Time for Network Coordination Games
+                </a> &nbsp;
+            </strong>
+
+            <div class="authors">
+              <a href="http://shant.boodaghians.com/" target="_blank" style="color:black">
+              S. Boodaghians</a>,
+              <a href="https://dblp.org/pers/hd/k/Kulkarni:Rucha" target="_blank">R. Kulkarni</a>,
+              <a href="http://rutamehta.cs.illinois.edu/">R. Mehta</a>
+            </div>
+
+            <div class="publication-conference">
+              Manuscript, 2018
+            </div>
+        </li>
+
+        </ol>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      (function(h,u){$("#email").html( u+"@"+h );})('mit.edu','tzamos');
+      (function(h,u){$("#phone").html( u+"0"+h );})('9-1739','(617)-9');
+      $(".bib").click(function() {
+        $(".details").hide();
+        $(".active").not(this).removeClass("active");
+        $(this).toggleClass("active");
+        if( !$(this).hasClass("active") ) return;
+        var o = $(".details", $(this).closest(".publication"));
+        $(".abstract",o).hide();
+        $(".bibtex",o).show();
+        o.toggle();
+      });
+      $(".abs").click(function() {
+        $(".details").hide();
+        $(".active").not(this).removeClass("active");
+        $(this).toggleClass("active");
+        if( !$(this).hasClass("active") ) return;
+        var o = $(".details", $(this).closest(".publication"));
+        $(".abstract",o).show();
+        $(".bibtex",o).hide();
+        o.toggle();
+      });
+      $(".navbar-link").click(function() {
+          $('html, body').animate({
+              scrollTop: $( $(this).attr("href") ).offset().top
+          }, 1000);
+          return false;
+      });
+      //$(".expand").css({display: "inline-block"});
+      //$(".expand + div").hide();
+      $(".expand").click(function() {
+        $(this).next().show(500);
+        $(this).hide();
+        return false;
+      });
+    });
+  </script>
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
