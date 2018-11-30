@@ -246,11 +246,11 @@ iframe {
 }
 
 .row .cell:nth-child(2) {
-  width: 280px;
+  width: 600px;
 }
 
 .row .cell:nth-child(3) {
-  width: 600px;
+  width: 280px;
 }
 
 /*.row .cell:nth-child(4) {
