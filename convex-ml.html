@@ -49,7 +49,7 @@ a {text-decoration:none}
           <div class="navbar-item"><a class="navbar-link" href="#program">Program</a></div>
           <div class="navbar-item"><a class="navbar-link" href="#organizers">Organizers</a></div>
           <div class="navbar-item"><a class="navbar-link" href="#venue">Venue</a></div>
-          <div class="navbar-item"><a class="navbar-link" href="#references">References</a></div>
+          <div class="navbar-item"><a class="navbar-link" href="#research">References</a></div>
           <div class="logos">
             NTUA
           </div>
@@ -64,10 +64,39 @@ a {text-decoration:none}
         </div>
       </div>
 
-      <div class="twelve columns" id="about" style="background-image: url(images/niddle.png); background-repeat: no-repeat; background-size: 600px;">
+      <div class="twelve columns" id="about">
+      <!--style="background-image: url(images/niddle.png); background-repeat: no-repeat; background-size: 600px;"-->
         <h4>About</h4>
-        <p> The goal of this seminar. </p>
+        <p> The goal of this seminar is to introduce the basic concepts of <strong>machine learning</strong> and <strong>convex 
+        optimization</strong>.
+            
+        <p> Automated Learning, or Machine Learning as it is usually called, describes the development of algorithmic procedures that
+        convert experience to expertise. Usually, machine learning procedures are inspired by algorithms used in convex optimization.
+            
+        <p> In convex optimization we explore algorithmic procedures to optimize convex functions over continous convex 
+        domains. Apart from the applications of convex optimization to machine learning, during the last decade there has been a great 
+        amount of research on using convex optimization for solving combinatorial optimization problems. </p>
+          
+        <p> The program of the seminar is described in detail below and involves: (1) the basic definitions and concepts of theoretical
+        machine learning, (2) introduction to convex optimization and basic applications to solving combinatorial problems, (3) the 
+        basic definitions, techniques and open problems of deep learning.</p>
     </div>
+      
+    <div style="margin-top: 2%;">
+        <div class="trow">
+        <h2>Prerequisites - Registration</h2>
+            <p> If you would like to participate in our seminar please register <a href="https://goo.gl/forms/Y5FWsBw337SGJsYh1">here</a>.
+            
+            <p> We will assume that all the participant are familiar with the concepts of the following manuscripts.
+            <ol> 
+                <li> Chapters 2, 3 and 4 of the book: <a href="https://www.deeplearningbook.org/">Deep Learning</a> [<a href="#DL'16" style="color:DarkGreen">2</a>].
+                </li>
+                
+                <li> Lecture Notes on Concentration Inequalities by Michael Goemans: <a href="http://math.mit.edu/~goemans/18310S15/chernoff-notes.pdf">here</a>.
+                </li>
+            </ol>
+        </div>
+      </div>
 
     <div class="contact" id="organizers" style="margin-top: 50px;">
           <!--div class="seven columns" id="organizers"-->
@@ -300,17 +329,84 @@ a {text-decoration:none}
             </div>
 
 
-    <div class="ttrow" style="padding-top: 1em; margin-top: 50px;">
+    <!--div class="ttrow" style="padding-top: 1em; margin-top: 50px;">
       <div class="twelve columns" id="venue" style="margin-top: 50px;">
         <h4>Venue</h4>
           <p>NTUA
         </div>
-    </div>
+    </div-->
 
-    <div class="ttrow" style="padding-top: 1em; margin-top: 50px;">
-      <div class="twelve columns" id="references" style="margin-top: 50px;">
+    <div class="trow2" style="padding-top: 1em; margin-top: 50px;">
+      <div class="twelve columns" id="research" style="margin-top: 50px;">
         <h4>References</h4>
-          <p>BLA
+          <ol>
+            <li>
+                <strong>
+                    <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" style="color:black" id="ML'14" target="_blank">
+                        Understanding Machine Learning: From Theory to Algorithms
+                    </a> &nbsp;
+                </strong>
+
+                <div class="authors">
+                    <a href="https://www.cs.huji.ac.il/~shais/" style="color:black" target="_blank">Shai Shalev-Shwartz</a>,
+                    <a href="https://cs.uwaterloo.ca/~shai/" style="color:black" target="_blank">Shai Ben-David</a>
+                </div>
+
+                <div class="publication-conference">
+                  Cambridge University Press, 2014
+                </div>
+            </li>
+              
+            <li>
+                <strong>
+                    <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" style="color:black" id="DL'16" target="_blank">
+                        Deep Learning
+                    </a> &nbsp;
+                </strong>
+
+                <div class="authors">
+                    <a href="https://www.iangoodfellow.com/" style="color:black" target="_blank">Ian Goodfellow</a>,
+                    <a href="http://www.iro.umontreal.ca/~bengioy/yoshua_en/" style="color:black" target="_blank">Yoshua Bengio</a>,
+                    <a href="https://aaroncourville.wordpress.com/" style="color:black" target="_blank">Aaron Courville</a>
+                </div>
+
+                <div class="publication-conference">
+                  MIT Press, 2016
+                </div>
+            </li>
+              
+            <li>
+                <strong>
+                    <a href="https://theory.epfl.ch/vishnoi/Nisheeth-VishnoiFall2014-ConvexOptimization.pdf" style="color:black" id="CO'15" target="_blank">
+                        A Mini-Course on Convex Optimization
+                    </a> &nbsp;
+                </strong>
+
+                <div class="authors">
+                    <a href="http://www.cs.yale.edu/homes/vishnoi/Home.html" style="color:black" target="_blank">Nisheeth Vishnoi</a>
+                </div>
+
+                <div class="publication-conference">
+                  Manuscript, 2015
+                </div>
+            </li>
+              
+            <li>
+                <strong>
+                    <a href="http://courses.csail.mit.edu/6.S978/" style="color:black" id="CC'15" target="_blank">
+                        Lecture Notes: 6.S978 Graphs, Linear Algebra, and Optimization
+                    </a> &nbsp;
+                </strong>
+
+                <div class="authors">
+                    <a href="https://people.csail.mit.edu/madry/" style="color:black" target="_blank">Alexander Madry</a>
+                </div>
+
+                <div class="publication-conference">
+                  Manuscript, 2015
+                </div>
+            </li>
+          </ol>
         </div>
     </div>
 
