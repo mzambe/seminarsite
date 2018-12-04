@@ -102,16 +102,16 @@ a {text-decoration:none}
           <!--div class="seven columns" id="organizers"-->
             <h4>Organizers</h4>
               <div class="columnl" float="left">
-                <a href="#">Kyriakos Axiotis</a>
-                <p><strong>Email</strong>: kaxiotis [at) mit [dot) edu  
+                <a href="https://dblp.org/pers/hd/a/Axiotis:Kyriakos">Kyriakos Axiotis</a> 
+                </br> <div id="email1"></div> 
               </div>
               <div class="columnl" float="left">
                 <a href="http://people.csail.mit.edu/tsipras/">Dimitris Tsipras</a>
-                <p><strong>Email</strong>: tsipras [at)  mit (dot] edu
+                </br> <div id="email2"></div> 
               </div>
               <div class="columnr" float="left">
                 <a href="http://www.mit.edu/~mzampet">Manolis Zampetakis</a>
-                <p><strong>Email</strong>: mzampet [at)  mit (dot] edu
+                </br> <div id="email3"></div> 
               </div>
           </div>
 
@@ -138,7 +138,7 @@ a {text-decoration:none}
 
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        11 Dec.
+                        Dec 11 </br> 12:30-14:30
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Introduction to Learning Theory</strong>
@@ -150,7 +150,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        12 Dec.
+                        Dec 12 15:00-17:00
                       </div>
                       <div class="cell" data-title="Topic">
                           <strong>The Fundamental Theorem of PAC Learning</strong>                       
@@ -162,7 +162,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        14 Dec.
+                        Dec 14 17:00-19:00
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Introduction to Convex Optimization</strong>
@@ -192,7 +192,7 @@ a {text-decoration:none}
 
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        18 Dec.
+                        Dec 18 12:30-14:30
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Solving Max-Flow with Gradient Descent</strong>
@@ -204,7 +204,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        19 Dec.
+                        Dec 19 15:00-17:00
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Mirror Descent and Online Learning</strong>
@@ -216,7 +216,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        21 Dec.
+                        Dec 21 17:00-19:00
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Beyond Gradient Descent</strong>
@@ -246,7 +246,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        8 Jan.
+                        Jan 8 12:30-14:30
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Linear and Logistic Regression & Introduction to Neural Nets</strong>
@@ -258,7 +258,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        9 Jan.
+                        Jan 9 15:00-17:00
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Optimization and Generalization in Neural Nets <br> & Adversarial Learning</strong>
@@ -270,7 +270,7 @@ a {text-decoration:none}
                     
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        11 Jan.
+                        Jan 11 17:00-19:00
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Hackathon with PyTorch</strong>
@@ -300,7 +300,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        15 Jan.
+                        Jan 15 12:30-14:30
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Generative Models - Non-Convex MLE</strong>
@@ -312,7 +312,7 @@ a {text-decoration:none}
                       
                     <div class="row">
                       <div class="cell" data-title="Date">
-                        16 Jan.
+                        Jan 16 15:00-17:00
                       </div>
                       <div class="cell" data-title="Topic">
                         <strong>Rademacher Complexity & Reinforcement Learning</strong>
@@ -415,44 +415,12 @@ a {text-decoration:none}
 
 
   <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700' rel='stylesheet' type='text/css'>
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
   <script type="text/javascript">
     $(function() {
-      (function(h,u){$("#email").html( u+"@"+h );})('mit.edu','tzamos');
-      (function(h,u){$("#phone").html( u+"0"+h );})('9-1739','(617)-9');
-      $(".bib").click(function() {
-        $(".details").hide();
-        $(".active").not(this).removeClass("active");
-        $(this).toggleClass("active");
-        if( !$(this).hasClass("active") ) return;
-        var o = $(".details", $(this).closest(".publication"));
-        $(".abstract",o).hide();
-        $(".bibtex",o).show();
-        o.toggle();
-      });
-      $(".abs").click(function() {
-        $(".details").hide();
-        $(".active").not(this).removeClass("active");
-        $(this).toggleClass("active");
-        if( !$(this).hasClass("active") ) return;
-        var o = $(".details", $(this).closest(".publication"));
-        $(".abstract",o).show();
-        $(".bibtex",o).hide();
-        o.toggle();
-      });
-      $(".navbar-link").click(function() {
-          $('html, body').animate({
-              scrollTop: $( $(this).attr("href") ).offset().top
-          }, 1000);
-          return false;
-      });
-      //$(".expand").css({display: "inline-block"});
-      //$(".expand + div").hide();
-      $(".expand").click(function() {
-        $(this).next().show(500);
-        $(this).hide();
-        return false;
-      });
+      (function(a,b,c){$("#email1").html( b + "t" + a + "i" + c );})('is@m','kaxio', 't.edu');
+      (function(a,b,c){$("#email2").html( b + "p" + a + "i" + c );})('ras@m','tsi', 't.edu');
+      (function(a,b,c){$("#email3").html( b + "m" + a + "i" + c );})('pet@m','mza', 't.edu');
     });
   </script>
 <!--===============================================================================================-->
